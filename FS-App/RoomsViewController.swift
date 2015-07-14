@@ -26,19 +26,28 @@ class RoomsViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         
         freeRooms = parseRooms("08:15",day: "so")
-        
-        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-        
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        buildTitle()
+       
     }
+    
+    
+    private func buildTitle(){
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 36, height: 36))
+        imageView.contentMode = .ScaleAspectFit
+        let image = UIImage(named: "roomsearch_holo_light")
+        imageView.image = image
+        navigationItem.titleView = imageView
+        navigationItem.rightBarButtonItem?.title = "Raumsuche"
+       
+
+    }
+    
+    //temporary array to save the parsed rooms.
     var rooms: [Room] = [Room]()
     
     func parseRooms(time: String, day: String) -> [Room]{
         
-        var xmlURL = NSURL(string: "http://fs.cs.hm.edu/roomSearch/RESTService/freeRooms?clockTime="+time+"&weekday="+day)
+        var xmlURL = NSURL(string: URLs.roomSearch+"\(time)&weekday=\(day)")
         
         var parser = NSXMLParser(contentsOfURL: xmlURL)!
         parser.delegate = self
@@ -56,11 +65,9 @@ class RoomsViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     // MARK: - TableViewHeader
     
-    //@IBOutlet weak var timeAndDayPicker: UIPickerView!
     @IBOutlet weak var timeAndDayPicker: UIPickerView!
     
     @IBAction func searchForFreeRooms(sender: AnyObject) {
-    //@IBAction func searchForFreeRooms(sender: AnyObject) {
         var day = pickerView(timeAndDayPicker, titleForRow: timeAndDayPicker.selectedRowInComponent(0), forComponent: 0)
         var time = pickerView(timeAndDayPicker, titleForRow: timeAndDayPicker.selectedRowInComponent(1), forComponent: 1)
         freeRooms.removeAll()
@@ -68,11 +75,8 @@ class RoomsViewController: UIViewController, UITableViewDataSource, UITableViewD
         tableView.reloadData()
         
         freeRooms = parseRooms(time, day: day.substringToIndex(advance(day.startIndex, 2)).lowercaseString)
-        //freeRooms = getRooms()
         tableView.reloadData()
         
-        
-        println("day: \(day) - time: \(time)")
     }
     
     
@@ -88,13 +92,6 @@ class RoomsViewController: UIViewController, UITableViewDataSource, UITableViewD
         return timeAndDayData[component][row]
     }
     
-    
-    
-    
-    
-    
-    
-    
     // MARK: - Table view data source
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -109,56 +106,9 @@ class RoomsViewController: UIViewController, UITableViewDataSource, UITableViewD
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("FreeRoom", forIndexPath: indexPath) as! RoomTableViewCell
         cell.freeRoom = freeRooms[indexPath.row]
-        // Configure the cell...
         
         return cell
     }
-    
-    
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-    // Return NO if you do not want the specified item to be editable.
-    return true
-    }
-    */
-    
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-    if editingStyle == .Delete {
-    // Delete the row from the data source
-    tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-    } else if editingStyle == .Insert {
-    // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }
-    }
-    */
-    
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-    
-    }
-    */
-    
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-    // Return NO if you do not want the item to be re-orderable.
-    return true
-    }
-    */
-    
-    /*
-    // MARK: - Navigation
-    
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-    }
-    */
     
     // MARK: - XMLParser Delegate
     var eName = ""

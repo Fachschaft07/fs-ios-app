@@ -7,17 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B31781E41B43E45C00214F6C /* JobTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31781E31B43E45C00214F6C /* JobTableViewController.swift */; };
+		B31781E61B43E4E500214F6C /* JobTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31781E51B43E4E500214F6C /* JobTableViewCell.swift */; };
+		B31781E81B43E4F000214F6C /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31781E71B43E4F000214F6C /* Job.swift */; };
+		B31781EA1B43E50400214F6C /* JobJSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31781E91B43E50400214F6C /* JobJSONParser.swift */; };
+		B32C16A61B4A9DF500E10EEA /* MarkdownParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32C16A51B4A9DF500E10EEA /* MarkdownParser.swift */; };
 		B394D26D1B15DAD1009A9E0B /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B394D26C1B15DAD1009A9E0B /* TabBarViewController.swift */; };
-		B394D26F1B15DB0C009A9E0B /* RoomTableViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B394D26E1B15DB0C009A9E0B /* RoomTableViewController2.swift */; };
+		B39550061B40541F00DD2F99 /* PubilicTransportationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39550051B40541F00DD2F99 /* PubilicTransportationViewController.swift */; };
+		B39550081B42B4D600DD2F99 /* PublicTransportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39550071B42B4D600DD2F99 /* PublicTransportTableViewCell.swift */; };
+		B395500A1B42B65D00DD2F99 /* PublicTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39550091B42B65D00DD2F99 /* PublicTransport.swift */; };
+		B395500C1B42C2B200DD2F99 /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = B395500B1B42C2B200DD2F99 /* URLs.swift */; };
+		B395500E1B42D2F400DD2F99 /* PublicTransportJSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B395500D1B42D2F400DD2F99 /* PublicTransportJSONParser.swift */; };
+		B39793141B53E66A006E4758 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B39793131B53E66A006E4758 /* Images.xcassets */; };
 		B39C437C1B1627D600DB3A93 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39C437B1B1627D600DB3A93 /* Room.swift */; };
 		B39C437E1B162A5000DB3A93 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39C437D1B162A5000DB3A93 /* TestViewController.swift */; };
 		B39C43801B16503A00DB3A93 /* RoomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39C437F1B16503A00DB3A93 /* RoomTableViewCell.swift */; };
 		B3C5F6941B30509A00B0F2BF /* RoomsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C5F6931B30509900B0F2BF /* RoomsViewController.swift */; };
 		B3D75CAF1B12404A00C297A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D75CAE1B12404A00C297A0 /* AppDelegate.swift */; };
 		B3D75CB41B12404A00C297A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3D75CB21B12404A00C297A0 /* Main.storyboard */; };
-		B3D75CB61B12404A00C297A0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3D75CB51B12404A00C297A0 /* Images.xcassets */; };
 		B3D75CB91B12404A00C297A0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3D75CB71B12404A00C297A0 /* LaunchScreen.xib */; };
 		B3D75CC51B12404A00C297A0 /* FS_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D75CC41B12404A00C297A0 /* FS_AppTests.swift */; };
+		B3E4700E1B4989820083A917 /* DetailJobViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E4700D1B4989820083A917 /* DetailJobViewController.swift */; };
+		B3EDB6FD1B4FFC330080BE1D /* ExamModuleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EDB6FC1B4FFC330080BE1D /* ExamModuleTableViewCell.swift */; };
+		B3EDB6FF1B4FFC770080BE1D /* ExamModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EDB6FE1B4FFC770080BE1D /* ExamModule.swift */; };
+		B3EDB7011B5007E00080BE1D /* ExamModuleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EDB7001B5007E00080BE1D /* ExamModuleTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,8 +44,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B31781E31B43E45C00214F6C /* JobTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobTableViewController.swift; sourceTree = "<group>"; };
+		B31781E51B43E4E500214F6C /* JobTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobTableViewCell.swift; sourceTree = "<group>"; };
+		B31781E71B43E4F000214F6C /* Job.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
+		B31781E91B43E50400214F6C /* JobJSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobJSONParser.swift; sourceTree = "<group>"; };
+		B32C16A51B4A9DF500E10EEA /* MarkdownParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkdownParser.swift; sourceTree = "<group>"; };
 		B394D26C1B15DAD1009A9E0B /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
-		B394D26E1B15DB0C009A9E0B /* RoomTableViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoomTableViewController2.swift; path = "FS-App/RoomTableViewController2.swift"; sourceTree = "<group>"; };
+		B39550051B40541F00DD2F99 /* PubilicTransportationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PubilicTransportationViewController.swift; sourceTree = "<group>"; };
+		B39550071B42B4D600DD2F99 /* PublicTransportTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicTransportTableViewCell.swift; sourceTree = "<group>"; };
+		B39550091B42B65D00DD2F99 /* PublicTransport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicTransport.swift; sourceTree = "<group>"; };
+		B395500B1B42C2B200DD2F99 /* URLs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
+		B395500D1B42D2F400DD2F99 /* PublicTransportJSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicTransportJSONParser.swift; sourceTree = "<group>"; };
+		B39793131B53E66A006E4758 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B39C437B1B1627D600DB3A93 /* Room.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Room.swift; path = "FS-App/Room.swift"; sourceTree = "<group>"; };
 		B39C437D1B162A5000DB3A93 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		B39C437F1B16503A00DB3A93 /* RoomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomTableViewCell.swift; sourceTree = "<group>"; };
@@ -41,11 +64,14 @@
 		B3D75CAD1B12404A00C297A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3D75CAE1B12404A00C297A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B3D75CB31B12404A00C297A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		B3D75CB51B12404A00C297A0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B3D75CB81B12404A00C297A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		B3D75CBE1B12404A00C297A0 /* FS-AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FS-AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3D75CC31B12404A00C297A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3D75CC41B12404A00C297A0 /* FS_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FS_AppTests.swift; sourceTree = "<group>"; };
+		B3E4700D1B4989820083A917 /* DetailJobViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailJobViewController.swift; sourceTree = "<group>"; };
+		B3EDB6FC1B4FFC330080BE1D /* ExamModuleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExamModuleTableViewCell.swift; sourceTree = "<group>"; };
+		B3EDB6FE1B4FFC770080BE1D /* ExamModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExamModule.swift; sourceTree = "<group>"; };
+		B3EDB7001B5007E00080BE1D /* ExamModuleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExamModuleTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +92,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B31781E21B43DB3300214F6C /* Job */ = {
+			isa = PBXGroup;
+			children = (
+				B31781E31B43E45C00214F6C /* JobTableViewController.swift */,
+				B31781E51B43E4E500214F6C /* JobTableViewCell.swift */,
+				B31781E71B43E4F000214F6C /* Job.swift */,
+				B31781E91B43E50400214F6C /* JobJSONParser.swift */,
+				B3E4700D1B4989820083A917 /* DetailJobViewController.swift */,
+				B32C16A51B4A9DF500E10EEA /* MarkdownParser.swift */,
+			);
+			name = Job;
+			sourceTree = "<group>";
+		};
+		B39550041B4051E500DD2F99 /* PublicTransportation */ = {
+			isa = PBXGroup;
+			children = (
+				B39550051B40541F00DD2F99 /* PubilicTransportationViewController.swift */,
+				B39550071B42B4D600DD2F99 /* PublicTransportTableViewCell.swift */,
+				B39550091B42B65D00DD2F99 /* PublicTransport.swift */,
+				B395500D1B42D2F400DD2F99 /* PublicTransportJSONParser.swift */,
+			);
+			name = PublicTransportation;
+			sourceTree = "<group>";
+		};
 		B3D75CA01B12404A00C297A0 = {
 			isa = PBXGroup;
 			children = (
@@ -87,7 +137,9 @@
 		B3D75CAB1B12404A00C297A0 /* FS-App */ = {
 			isa = PBXGroup;
 			children = (
-				B3F982351B170A7E003DDCDB /* Test */,
+				B3EDB6FB1B4FF6720080BE1D /* ExamModules */,
+				B31781E21B43DB3300214F6C /* Job */,
+				B39550041B4051E500DD2F99 /* PublicTransportation */,
 				B3F982341B170A6B003DDCDB /* Common */,
 				B3F982331B1707DA003DDCDB /* RoomSearch */,
 				B3D75CAC1B12404A00C297A0 /* Supporting Files */,
@@ -98,6 +150,7 @@
 		B3D75CAC1B12404A00C297A0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B3D75CAE1B12404A00C297A0 /* AppDelegate.swift */,
 				B3D75CAD1B12404A00C297A0 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -120,12 +173,21 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		B3EDB6FB1B4FF6720080BE1D /* ExamModules */ = {
+			isa = PBXGroup;
+			children = (
+				B3EDB6FC1B4FFC330080BE1D /* ExamModuleTableViewCell.swift */,
+				B3EDB6FE1B4FFC770080BE1D /* ExamModule.swift */,
+				B3EDB7001B5007E00080BE1D /* ExamModuleTableViewController.swift */,
+			);
+			name = ExamModules;
+			sourceTree = "<group>";
+		};
 		B3F982331B1707DA003DDCDB /* RoomSearch */ = {
 			isa = PBXGroup;
 			children = (
 				B39C437B1B1627D600DB3A93 /* Room.swift */,
 				B39C437F1B16503A00DB3A93 /* RoomTableViewCell.swift */,
-				B394D26E1B15DB0C009A9E0B /* RoomTableViewController2.swift */,
 				B3C5F6931B30509900B0F2BF /* RoomsViewController.swift */,
 			);
 			name = RoomSearch;
@@ -135,11 +197,12 @@
 		B3F982341B170A6B003DDCDB /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				B3D75CAE1B12404A00C297A0 /* AppDelegate.swift */,
+				B39793131B53E66A006E4758 /* Images.xcassets */,
+				B3F982351B170A7E003DDCDB /* Test */,
 				B394D26C1B15DAD1009A9E0B /* TabBarViewController.swift */,
 				B3D75CB21B12404A00C297A0 /* Main.storyboard */,
-				B3D75CB51B12404A00C297A0 /* Images.xcassets */,
 				B3D75CB71B12404A00C297A0 /* LaunchScreen.xib */,
+				B395500B1B42C2B200DD2F99 /* URLs.swift */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -232,9 +295,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B39793141B53E66A006E4758 /* Images.xcassets in Resources */,
 				B3D75CB41B12404A00C297A0 /* Main.storyboard in Resources */,
 				B3D75CB91B12404A00C297A0 /* LaunchScreen.xib in Resources */,
-				B3D75CB61B12404A00C297A0 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,8 +317,21 @@
 			files = (
 				B39C43801B16503A00DB3A93 /* RoomTableViewCell.swift in Sources */,
 				B39C437E1B162A5000DB3A93 /* TestViewController.swift in Sources */,
-				B394D26F1B15DB0C009A9E0B /* RoomTableViewController2.swift in Sources */,
+				B3EDB7011B5007E00080BE1D /* ExamModuleTableViewController.swift in Sources */,
+				B39550061B40541F00DD2F99 /* PubilicTransportationViewController.swift in Sources */,
 				B3C5F6941B30509A00B0F2BF /* RoomsViewController.swift in Sources */,
+				B3EDB6FD1B4FFC330080BE1D /* ExamModuleTableViewCell.swift in Sources */,
+				B3EDB6FF1B4FFC770080BE1D /* ExamModule.swift in Sources */,
+				B395500A1B42B65D00DD2F99 /* PublicTransport.swift in Sources */,
+				B32C16A61B4A9DF500E10EEA /* MarkdownParser.swift in Sources */,
+				B3E4700E1B4989820083A917 /* DetailJobViewController.swift in Sources */,
+				B31781E81B43E4F000214F6C /* Job.swift in Sources */,
+				B31781E41B43E45C00214F6C /* JobTableViewController.swift in Sources */,
+				B395500C1B42C2B200DD2F99 /* URLs.swift in Sources */,
+				B31781E61B43E4E500214F6C /* JobTableViewCell.swift in Sources */,
+				B395500E1B42D2F400DD2F99 /* PublicTransportJSONParser.swift in Sources */,
+				B39550081B42B4D600DD2F99 /* PublicTransportTableViewCell.swift in Sources */,
+				B31781EA1B43E50400214F6C /* JobJSONParser.swift in Sources */,
 				B394D26D1B15DAD1009A9E0B /* TabBarViewController.swift in Sources */,
 				B39C437C1B1627D600DB3A93 /* Room.swift in Sources */,
 				B3D75CAF1B12404A00C297A0 /* AppDelegate.swift in Sources */,
@@ -386,20 +462,24 @@
 		B3D75CC91B12404A00C297A0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = "FS-App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		B3D75CCA1B12404A00C297A0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = "FS-App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
