@@ -30,7 +30,10 @@ class MarkdownParser{
         
         
         case err
-        
+        //hashtag neue zeile,
+        //*text* fett
+        //.Text = liste
+        // . listenEnde
         func changeState(newChar: Character) -> State {
             var newState = State.err
             switch self {

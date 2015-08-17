@@ -12,7 +12,6 @@
 		B31781E81B43E4F000214F6C /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31781E71B43E4F000214F6C /* Job.swift */; };
 		B31781EA1B43E50400214F6C /* JobJSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31781E91B43E50400214F6C /* JobJSONParser.swift */; };
 		B32C16A61B4A9DF500E10EEA /* MarkdownParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32C16A51B4A9DF500E10EEA /* MarkdownParser.swift */; };
-		B394D26D1B15DAD1009A9E0B /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B394D26C1B15DAD1009A9E0B /* TabBarViewController.swift */; };
 		B39550061B40541F00DD2F99 /* PubilicTransportationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39550051B40541F00DD2F99 /* PubilicTransportationViewController.swift */; };
 		B39550081B42B4D600DD2F99 /* PublicTransportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39550071B42B4D600DD2F99 /* PublicTransportTableViewCell.swift */; };
 		B395500A1B42B65D00DD2F99 /* PublicTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39550091B42B65D00DD2F99 /* PublicTransport.swift */; };
@@ -22,12 +21,17 @@
 		B39C437C1B1627D600DB3A93 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39C437B1B1627D600DB3A93 /* Room.swift */; };
 		B39C437E1B162A5000DB3A93 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39C437D1B162A5000DB3A93 /* TestViewController.swift */; };
 		B39C43801B16503A00DB3A93 /* RoomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39C437F1B16503A00DB3A93 /* RoomTableViewCell.swift */; };
+		B3B053951B57CF07004A1B9B /* ExamJSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B053941B57CF07004A1B9B /* ExamJSONParser.swift */; };
 		B3C5F6941B30509A00B0F2BF /* RoomsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C5F6931B30509900B0F2BF /* RoomsViewController.swift */; };
 		B3D75CAF1B12404A00C297A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D75CAE1B12404A00C297A0 /* AppDelegate.swift */; };
 		B3D75CB41B12404A00C297A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3D75CB21B12404A00C297A0 /* Main.storyboard */; };
 		B3D75CB91B12404A00C297A0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3D75CB71B12404A00C297A0 /* LaunchScreen.xib */; };
 		B3D75CC51B12404A00C297A0 /* FS_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D75CC41B12404A00C297A0 /* FS_AppTests.swift */; };
 		B3E4700E1B4989820083A917 /* DetailJobViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E4700D1B4989820083A917 /* DetailJobViewController.swift */; };
+		B3ED35421B67EE30009FA281 /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3ED35411B67EE30009FA281 /* Entry.swift */; };
+		B3ED35441B67EF6B009FA281 /* BlackboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3ED35431B67EF6B009FA281 /* BlackboardTableViewCell.swift */; };
+		B3ED35461B67EF91009FA281 /* BlackboardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3ED35451B67EF91009FA281 /* BlackboardTableViewController.swift */; };
+		B3ED35481B67EFBD009FA281 /* BlackboardJSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3ED35471B67EFBD009FA281 /* BlackboardJSONParser.swift */; };
 		B3EDB6FD1B4FFC330080BE1D /* ExamModuleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EDB6FC1B4FFC330080BE1D /* ExamModuleTableViewCell.swift */; };
 		B3EDB6FF1B4FFC770080BE1D /* ExamModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EDB6FE1B4FFC770080BE1D /* ExamModule.swift */; };
 		B3EDB7011B5007E00080BE1D /* ExamModuleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EDB7001B5007E00080BE1D /* ExamModuleTableViewController.swift */; };
@@ -49,7 +53,6 @@
 		B31781E71B43E4F000214F6C /* Job.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
 		B31781E91B43E50400214F6C /* JobJSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobJSONParser.swift; sourceTree = "<group>"; };
 		B32C16A51B4A9DF500E10EEA /* MarkdownParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkdownParser.swift; sourceTree = "<group>"; };
-		B394D26C1B15DAD1009A9E0B /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		B39550051B40541F00DD2F99 /* PubilicTransportationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PubilicTransportationViewController.swift; sourceTree = "<group>"; };
 		B39550071B42B4D600DD2F99 /* PublicTransportTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicTransportTableViewCell.swift; sourceTree = "<group>"; };
 		B39550091B42B65D00DD2F99 /* PublicTransport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicTransport.swift; sourceTree = "<group>"; };
@@ -59,6 +62,7 @@
 		B39C437B1B1627D600DB3A93 /* Room.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Room.swift; path = "FS-App/Room.swift"; sourceTree = "<group>"; };
 		B39C437D1B162A5000DB3A93 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		B39C437F1B16503A00DB3A93 /* RoomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomTableViewCell.swift; sourceTree = "<group>"; };
+		B3B053941B57CF07004A1B9B /* ExamJSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExamJSONParser.swift; sourceTree = "<group>"; };
 		B3C5F6931B30509900B0F2BF /* RoomsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomsViewController.swift; sourceTree = "<group>"; };
 		B3D75CA91B12404A00C297A0 /* FS-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FS-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3D75CAD1B12404A00C297A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -69,6 +73,10 @@
 		B3D75CC31B12404A00C297A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3D75CC41B12404A00C297A0 /* FS_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FS_AppTests.swift; sourceTree = "<group>"; };
 		B3E4700D1B4989820083A917 /* DetailJobViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailJobViewController.swift; sourceTree = "<group>"; };
+		B3ED35411B67EE30009FA281 /* Entry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
+		B3ED35431B67EF6B009FA281 /* BlackboardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlackboardTableViewCell.swift; sourceTree = "<group>"; };
+		B3ED35451B67EF91009FA281 /* BlackboardTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlackboardTableViewController.swift; sourceTree = "<group>"; };
+		B3ED35471B67EFBD009FA281 /* BlackboardJSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlackboardJSONParser.swift; sourceTree = "<group>"; };
 		B3EDB6FC1B4FFC330080BE1D /* ExamModuleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExamModuleTableViewCell.swift; sourceTree = "<group>"; };
 		B3EDB6FE1B4FFC770080BE1D /* ExamModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExamModule.swift; sourceTree = "<group>"; };
 		B3EDB7001B5007E00080BE1D /* ExamModuleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExamModuleTableViewController.swift; sourceTree = "<group>"; };
@@ -137,6 +145,8 @@
 		B3D75CAB1B12404A00C297A0 /* FS-App */ = {
 			isa = PBXGroup;
 			children = (
+				B3ED35401B67EE0B009FA281 /* Blackboard */,
+				B3F982351B170A7E003DDCDB /* Test */,
 				B3EDB6FB1B4FF6720080BE1D /* ExamModules */,
 				B31781E21B43DB3300214F6C /* Job */,
 				B39550041B4051E500DD2F99 /* PublicTransportation */,
@@ -173,12 +183,24 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		B3ED35401B67EE0B009FA281 /* Blackboard */ = {
+			isa = PBXGroup;
+			children = (
+				B3ED35411B67EE30009FA281 /* Entry.swift */,
+				B3ED35431B67EF6B009FA281 /* BlackboardTableViewCell.swift */,
+				B3ED35451B67EF91009FA281 /* BlackboardTableViewController.swift */,
+				B3ED35471B67EFBD009FA281 /* BlackboardJSONParser.swift */,
+			);
+			name = Blackboard;
+			sourceTree = "<group>";
+		};
 		B3EDB6FB1B4FF6720080BE1D /* ExamModules */ = {
 			isa = PBXGroup;
 			children = (
 				B3EDB6FC1B4FFC330080BE1D /* ExamModuleTableViewCell.swift */,
 				B3EDB6FE1B4FFC770080BE1D /* ExamModule.swift */,
 				B3EDB7001B5007E00080BE1D /* ExamModuleTableViewController.swift */,
+				B3B053941B57CF07004A1B9B /* ExamJSONParser.swift */,
 			);
 			name = ExamModules;
 			sourceTree = "<group>";
@@ -198,8 +220,6 @@
 			isa = PBXGroup;
 			children = (
 				B39793131B53E66A006E4758 /* Images.xcassets */,
-				B3F982351B170A7E003DDCDB /* Test */,
-				B394D26C1B15DAD1009A9E0B /* TabBarViewController.swift */,
 				B3D75CB21B12404A00C297A0 /* Main.storyboard */,
 				B3D75CB71B12404A00C297A0 /* LaunchScreen.xib */,
 				B395500B1B42C2B200DD2F99 /* URLs.swift */,
@@ -315,6 +335,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3ED35441B67EF6B009FA281 /* BlackboardTableViewCell.swift in Sources */,
+				B3ED35481B67EFBD009FA281 /* BlackboardJSONParser.swift in Sources */,
+				B3ED35421B67EE30009FA281 /* Entry.swift in Sources */,
 				B39C43801B16503A00DB3A93 /* RoomTableViewCell.swift in Sources */,
 				B39C437E1B162A5000DB3A93 /* TestViewController.swift in Sources */,
 				B3EDB7011B5007E00080BE1D /* ExamModuleTableViewController.swift in Sources */,
@@ -329,10 +352,11 @@
 				B31781E41B43E45C00214F6C /* JobTableViewController.swift in Sources */,
 				B395500C1B42C2B200DD2F99 /* URLs.swift in Sources */,
 				B31781E61B43E4E500214F6C /* JobTableViewCell.swift in Sources */,
+				B3ED35461B67EF91009FA281 /* BlackboardTableViewController.swift in Sources */,
 				B395500E1B42D2F400DD2F99 /* PublicTransportJSONParser.swift in Sources */,
 				B39550081B42B4D600DD2F99 /* PublicTransportTableViewCell.swift in Sources */,
 				B31781EA1B43E50400214F6C /* JobJSONParser.swift in Sources */,
-				B394D26D1B15DAD1009A9E0B /* TabBarViewController.swift in Sources */,
+				B3B053951B57CF07004A1B9B /* ExamJSONParser.swift in Sources */,
 				B39C437C1B1627D600DB3A93 /* Room.swift in Sources */,
 				B3D75CAF1B12404A00C297A0 /* AppDelegate.swift in Sources */,
 			);
