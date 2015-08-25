@@ -9,17 +9,24 @@
 import UIKit
 
 class BlackboardTableViewController: UITableViewController {
-
+    
+    @IBOutlet var blackboardTableView: UITableView!
+    var entries = [Entry]()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        blackboardTableView.estimatedRowHeight = blackboardTableView.rowHeight
+        blackboardTableView.rowHeight = UITableViewAutomaticDimension
+        refresh(nil)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
-
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -30,25 +37,42 @@ class BlackboardTableViewController: UITableViewController {
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Potentially incomplete method implementation.
         // Return the number of sections.
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return 0
+        return entries.count
     }
 
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as! UITableViewCell
-
-        // Configure the cell...
+        let cell = blackboardTableView.dequeueReusableCellWithIdentifier("BlackBoardCell", forIndexPath: indexPath) as! BlackboardTableViewCell
+        cell.entry = entries[indexPath.row]
 
         return cell
     }
-    */
-
+    
+    @IBAction func refresh(sender: UIRefreshControl?) {
+        sender?.beginRefreshing()
+        let nsurl = NSURL(string: URLs.blackboardEntry)
+        if let url = nsurl {
+            let qos = Int(QOS_CLASS_USER_INITIATED.value)
+            dispatch_async(dispatch_get_global_queue(qos,0)) {() -> Void in
+                if let jsonData: NSData = NSData(contentsOfURL: url){
+                    dispatch_async(dispatch_get_main_queue()){
+                        let parser = BlackboardJSONParser()
+                        self.entries = parser.parse(jsonData)
+                        self.blackboardTableView.reloadData()
+                        sender?.endRefreshing()
+                    }
+                }
+            }
+        }
+    }
+    
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
@@ -84,14 +108,19 @@ class BlackboardTableViewController: UITableViewController {
     }
     */
 
-    /*
+
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "ShowDetailBlackboardEntrySegue" {
+            if let destination = segue.destinationViewController as? DetailBlackboardViewController {
+                if let path = blackboardTableView.indexPathForSelectedRow()?.row {
+                    destination.entry = entries[path]
+                }
+            }
+        }
     }
-    */
+
 
 }

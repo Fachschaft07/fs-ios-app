@@ -22,12 +22,10 @@ class RoomTableViewCell: UITableViewCell {
     @IBOutlet weak var freeUntilLabel: UILabel!
    
     func updateUI(){
-        typeLabel?.text = nil
         roomNameLabel?.text = nil
         freeUntilLabel?.text = nil
         
         if let freeRoom = self.freeRoom{
-            typeLabel?.text = freeRoom.roomType ?? "err RoomType"
             roomNameLabel?.text = freeRoom.roomName ?? "err RoomName"
             freeUntilLabel?.text = freeRoom.freeUntil ?? "err freeUntil"
         }

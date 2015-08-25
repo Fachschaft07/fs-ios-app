@@ -9,9 +9,8 @@
 import Foundation
 
 struct Job {
-    let type: String
     let title: String
-    let company: String
+    let provider: String
     let description: String
-    let url: String
+    let contact: Person
 }

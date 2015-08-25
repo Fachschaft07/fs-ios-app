@@ -10,11 +10,12 @@ import Foundation
 
 
 struct Entry {
+    let id: String
+    let author: Person
     let subject: String
-    let author: String
     let text: String
-    let teacher: String
-    let group: String
-    let publish: NSDate
-    let expire: NSDate
+    let teachers: [Person]
+    let groups: [Group]
+    let publish: Double
+    let url: String
 }

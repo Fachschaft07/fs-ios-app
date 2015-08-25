@@ -11,11 +11,10 @@ import UIKit
 class DetailJobViewController: UIViewController {
     
     
-    var jobType = String()
-    var jobTitle = String()
-    var company = String()
-    var jobDescription = String()
-    var url = String()
+    var jobTitle: String = ""
+    var company: String  = ""
+    var jobDescription: String = ""
+    var contact: Person = Person(id: "", lastName: "", firstName: "", title: "")
 
     @IBOutlet weak var detailJobTextView: UITextView!
     
@@ -25,22 +24,10 @@ class DetailJobViewController: UIViewController {
     }
     
     override func viewWillAppear(animated: Bool) {
-        var parser = MarkdownParser()
-        var completeText = NSMutableAttributedString()
-        var attrString = NSAttributedString(string: jobType+"\n\n", attributes: NSDictionary(object: Fonts.normalText, forKey: NSFontAttributeName) as [NSObject : AnyObject])
-        completeText.appendAttributedString(attrString)
-        attrString = NSAttributedString(string: jobTitle+"\n\n", attributes: NSDictionary(object: Fonts.normalText, forKey: NSFontAttributeName) as [NSObject : AnyObject])
-        completeText.appendAttributedString(attrString)
-        attrString = NSAttributedString(string: company+"\n\n", attributes: NSDictionary(object: Fonts.normalText, forKey: NSFontAttributeName) as [NSObject : AnyObject])
-        completeText.appendAttributedString(attrString)
-        completeText.appendAttributedString(parser.calc(jobDescription))
-        attrString = NSAttributedString(string: "\n\n" + url, attributes: NSDictionary(object: Fonts.normalText, forKey: NSFontAttributeName) as [NSObject : AnyObject])
-        completeText.appendAttributedString(attrString)
+        super.viewWillAppear(animated)
         
-        
-        //String text = "\(jobType)\n\n\(jobTitle)\n\n\(company)\n\n\(parser.calc(jobDescription))\n\n\(url))"
-//        super.viewWillAppear(animated)
-        detailJobTextView.attributedText = completeText
+        var text: String = "\(jobTitle)\n\n\(company)\n\n\(jobDescription)\n\n\(contact.title)\n\(contact.lastName)\n\(contact.firstName)"
+        detailJobTextView.text = text
     }
 
     override func didReceiveMemoryWarning() {

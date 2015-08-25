@@ -9,7 +9,6 @@
 import Foundation
 
 struct Room {
-    let roomType: String
     let roomName: String
     let freeUntil: String    
 }

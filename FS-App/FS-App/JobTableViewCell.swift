@@ -16,21 +16,19 @@ class JobTableViewCell: UITableViewCell {
         }
     }
     
-    @IBOutlet weak var typeLabel: UILabel!
-    @IBOutlet weak var companyLabel: UILabel!
+
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var companyLabel: UILabel!
     
     
     
     func updateUI(){
-        typeLabel?.text = nil
         companyLabel?.text = nil
         titleLabel?.text = nil
         
         
         if let job = self.job{
-            typeLabel?.text = job.type ?? "err type"
-            companyLabel?.text = job.company ?? "err company"
+            companyLabel?.text = job.provider ?? "err company"
             titleLabel?.text = job.title ?? "err Title"
         }
     }
