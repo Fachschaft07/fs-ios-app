@@ -9,6 +9,37 @@
 import UIKit
 
 class RoomsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
+    
+    private enum Day: String {
+        case Montag = "Montag"
+        case Dienstag = "Dienstag"
+        case Mittwoch = "Mittwoch"
+        case Donnerstag = "Donnerstag"
+        case Freitag = "Freitag"
+        case Samstag = "Samstag"
+        case Sonntag = "Sonntag"
+        
+        func getDay() -> String {
+            switch self {
+            case Montag:
+                return "MONDAY"
+            case Dienstag:
+                return "TUESDAY"
+            case Mittwoch:
+                return "WEDNESDAY"
+            case Donnerstag:
+                return "THURSDAY"
+            case Freitag:
+                return "FRIDAY"
+            case Samstag:
+                return "SATURDAY"
+            case Sonntag:
+                return "SUNDAY"
+            }
+        }
+    }
+
+    
     let tag = "RoomTableViewController"
     let timeAndDayData = [["Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag"],["08:15", "10:00", "11:45", "13:30", "15:15", "17:00", "18:45"]]
     
@@ -24,7 +55,7 @@ class RoomsViewController: UIViewController, UITableViewDataSource, UITableViewD
         tableView.dataSource = self
         
         
-        parseRooms("08:15",day: "so")
+        parseRooms("08:15",day: (Day(rawValue: "Sonntag")?.getDay())!)
         buildTitle()
        
     }
@@ -43,18 +74,15 @@ class RoomsViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     
     
-    // TODO: Change from String to url
-    
     func parseRooms(time: String, day: String){
-        var urlAsString: String = "www.google.de"
-        //var xmlURL = NSURL(string: URLs.roomSearch+"\(time)&weekday=\(day)")
         
+        let hourAndMinute = time.componentsSeparatedByString(":")
+        let urlAsString: String = "\(URLs.roomSearch)\(day)&hour=\(hourAndMinute[0])&minute=\(hourAndMinute[1])"
         let tmp = NSURL(string: urlAsString)
         if let url = tmp {
-            let qos = Int(QOS_CLASS_USER_INITIATED.value)
+            let qos = Int(QOS_CLASS_USER_INITIATED.rawValue)
             dispatch_async(dispatch_get_global_queue(qos,0)) {() -> Void in
-                //if let jsonData: NSData = NSData(contentsOfURL: url){
-                if let jsonData: NSData = ExampleData.roomSearch.dataUsingEncoding(NSUTF8StringEncoding) {
+                if let jsonData: NSData = NSData(contentsOfURL: url){
                     dispatch_async(dispatch_get_main_queue()){
                         let parser = RoomSearchJSONParser()
                         self.rooms = parser.parse(jsonData)
@@ -77,12 +105,12 @@ class RoomsViewController: UIViewController, UITableViewDataSource, UITableViewD
     @IBOutlet weak var timeAndDayPicker: UIPickerView!
     
     @IBAction func searchForFreeRooms(sender: AnyObject) {
-        var day = pickerView(timeAndDayPicker, titleForRow: timeAndDayPicker.selectedRowInComponent(0), forComponent: 0)
-        var time = pickerView(timeAndDayPicker, titleForRow: timeAndDayPicker.selectedRowInComponent(1), forComponent: 1)
+        let day = pickerView(timeAndDayPicker, titleForRow: timeAndDayPicker.selectedRowInComponent(0), forComponent: 0)!
+        let time = pickerView(timeAndDayPicker, titleForRow: timeAndDayPicker.selectedRowInComponent(1), forComponent: 1)!
         rooms.removeAll()
         tableView.reloadData()
         
-        parseRooms(time, day: day.substringToIndex(advance(day.startIndex, 2)).lowercaseString)
+        parseRooms(time, day: (Day(rawValue: day)?.getDay())!)
         tableView.reloadData()
         
     }
@@ -96,7 +124,7 @@ class RoomsViewController: UIViewController, UITableViewDataSource, UITableViewD
         return timeAndDayData[component].count;
     }
     
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return timeAndDayData[component][row]
     }
     

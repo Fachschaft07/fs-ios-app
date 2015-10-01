@@ -21,22 +21,22 @@ class DetailBlackboardViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         var text: String = ""
-        
-        
+        textField.scrollEnabled = false
+        textField.text? = text
         // set Text
         if let entry = self.entry{
             text = entry.subject
-            var time: NSDate = NSDate(timeIntervalSince1970: entry.publish/1000)
-            var formatter = NSDateFormatter();
+            let time: NSDate = NSDate(timeIntervalSince1970: entry.publish/1000)
+            let formatter = NSDateFormatter();
             formatter.dateFormat = "dd.MM.yyyy";
             let date = formatter.stringFromDate(time);
             text = "\(text)\nErstellt am: \(date)\n\n\(entry.text)"
-            var contactData: Person = entry.author
-            var contact: String = "Erstellt von:\n\(contactData.title)\n\(contactData.firstName) \(contactData.lastName)"
+            let contactData: Person = entry.author
+            let contact: String = "Erstellt von:\n\(contactData.name)"
             text = "\(text)\n\n\n\(contact)"
             var teachers: String = "Betroffene Professoren:"
             for teacher in entry.teachers {
-                teachers = "\(teachers)\n\(teacher.title) \(teacher.firstName) \(teacher.lastName)"
+                teachers = "\(teachers)\n\(teacher.name)"
             }
             text = "\(text)\n\n\(teachers)"
             var groups: String = "Betroffene Gruppen:\n"
@@ -46,7 +46,6 @@ class DetailBlackboardViewController: UIViewController {
                 let bulletPoint: Character = "•"
                 for group in entry.groups {
                     var currentGroup: String = group.study
-                    var semester = ""
                     if group.semester != 0{
                         currentGroup = "\(currentGroup) \(group.semester)"
                     }
@@ -63,10 +62,18 @@ class DetailBlackboardViewController: UIViewController {
                 // groups = "\(groups)\n\(group.study) \(group.semester) \(group.letter)"
             }
             text = "\(text)\n\n\(groups)"
+            let markupParser = MarkupParser()
+            let attributedText = markupParser.parseString(text)
+            textField.attributedText = attributedText
+            
         }
-        textField.text? = text
+        
     }
     
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        textField.scrollEnabled = true
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

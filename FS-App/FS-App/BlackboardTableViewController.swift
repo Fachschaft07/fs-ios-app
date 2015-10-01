@@ -18,7 +18,7 @@ class BlackboardTableViewController: UITableViewController {
         super.viewDidLoad()
         blackboardTableView.estimatedRowHeight = blackboardTableView.rowHeight
         blackboardTableView.rowHeight = UITableViewAutomaticDimension
-        refresh(nil)
+        refresh(super.refreshControl)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -58,7 +58,7 @@ class BlackboardTableViewController: UITableViewController {
         sender?.beginRefreshing()
         let nsurl = NSURL(string: URLs.blackboardEntry)
         if let url = nsurl {
-            let qos = Int(QOS_CLASS_USER_INITIATED.value)
+            let qos = Int(QOS_CLASS_USER_INITIATED.rawValue)
             dispatch_async(dispatch_get_global_queue(qos,0)) {() -> Void in
                 if let jsonData: NSData = NSData(contentsOfURL: url){
                     dispatch_async(dispatch_get_main_queue()){
@@ -115,7 +115,7 @@ class BlackboardTableViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "ShowDetailBlackboardEntrySegue" {
             if let destination = segue.destinationViewController as? DetailBlackboardViewController {
-                if let path = blackboardTableView.indexPathForSelectedRow()?.row {
+                if let path = blackboardTableView.indexPathForSelectedRow?.row {
                     destination.entry = entries[path]
                 }
             }

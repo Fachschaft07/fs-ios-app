@@ -27,15 +27,13 @@ class JobTableViewController: UITableViewController {
         super.didReceiveMemoryWarning()
     }
     
-    //TODO: Change from String to url 
     @IBAction func refresh(sender: UIRefreshControl?) {
         sender?.beginRefreshing()
         let nsurl = NSURL(string: URLs.job)
         if let url = nsurl {
-            let qos = Int(QOS_CLASS_USER_INITIATED.value)
+            let qos = Int(QOS_CLASS_USER_INITIATED.rawValue)
             dispatch_async(dispatch_get_global_queue(qos,0)) {() -> Void in
                 if let jsonData: NSData = NSData(contentsOfURL: url){
-                //if let jsonData: NSData = ExampleData.job.dataUsingEncoding(NSUTF8StringEncoding) {
                     dispatch_async(dispatch_get_main_queue()){
                         let parser = JobJSONParser()
                         self.jobs = parser.parse(jsonData)
@@ -75,7 +73,7 @@ class JobTableViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "ShowDetailJobSeque" {
             if let destination = segue.destinationViewController as? DetailJobViewController {
-                if let jobIndex = jobTableView.indexPathForSelectedRow()?.row {
+                if let jobIndex = jobTableView.indexPathForSelectedRow?.row {
                     destination.jobTitle = jobs[jobIndex].title
                     destination.jobDescription = jobs[jobIndex].description
                     destination.company = jobs[jobIndex].provider

@@ -9,14 +9,18 @@
 import UIKit
 
 class PubilicTransportationViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    let tag = "PublicTransportViewController"
+    var refreshControl = UIRefreshControl()
     
+    @IBOutlet weak var segmentedControll: UISegmentedControl!
     @IBOutlet weak var publicTransportTableView: UITableView!
     
     var publicTransport: [PublicTransport] = [PublicTransport]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.refreshControl.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
+        self.publicTransportTableView.addSubview(refreshControl)
+        
         publicTransportTableView.delegate = self
         publicTransportTableView.dataSource = self
         loadTable(URLs.loth)
@@ -27,12 +31,22 @@ class PubilicTransportationViewController: UIViewController, UITableViewDataSour
         // Dispose of any resources that can be recreated.
     }
     
+    func refresh(sender: AnyObject){
+        let name = segmentedControll.titleForSegmentAtIndex(segmentedControll.selectedSegmentIndex)!
+        let url: String
+        if name.hasPrefix("Loth")   {
+            url = URLs.loth
+        } else {
+            url = URLs.pasing
+        }
+        loadTable(url)
+    }
     
     /*
         Reload the table if the user changes the
     */
     @IBAction func changeStation(sender: UISegmentedControl) {
-        var name = sender.titleForSegmentAtIndex(sender.selectedSegmentIndex)!
+        let name = sender.titleForSegmentAtIndex(sender.selectedSegmentIndex)!
         let url: String
         if name.hasPrefix("Loth")   {
             url = URLs.loth
@@ -49,14 +63,14 @@ class PubilicTransportationViewController: UIViewController, UITableViewDataSour
     func loadTable(urlAsString: String) {
         let tmp = NSURL(string: urlAsString)
         if let url = tmp {
-            let qos = Int(QOS_CLASS_USER_INITIATED.value)
+            let qos = Int(QOS_CLASS_USER_INITIATED.rawValue)
             dispatch_async(dispatch_get_global_queue(qos,0)) {() -> Void in
                 if let jsonData: NSData = NSData(contentsOfURL: url){
                     dispatch_async(dispatch_get_main_queue()){
                         let parser = PublicTransportJSONParser()
                         self.publicTransport = parser.parse(jsonData)
                         self.publicTransportTableView.reloadData()
-                        
+                        self.refreshControl.endRefreshing()
                     }
                 }
             }

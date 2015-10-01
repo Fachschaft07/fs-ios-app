@@ -17,16 +17,17 @@ class RoomSearchJSONParser {
         
         
         
-        var error: NSError?
-        let jsonResult:NSArray = (NSJSONSerialization.JSONObjectWithData(data, options:NSJSONReadingOptions.MutableContainers , error: &error) as? NSArray)!
+        let jsonResult:NSArray = (try! NSJSONSerialization.JSONObjectWithData(data, options:NSJSONReadingOptions.MutableContainers ) as? NSArray)!
         
         for current in jsonResult{
-            var name: String = current.valueForKey("name")as! String
+            let name: String = current.valueForKey("name")as! String
             
-            var hour: Int =  current.valueForKey("hour")as! Int
-            var minute: Int = current.valueForKey("minute") as! Int
+            let hour: Int =  current.valueForKey("hour")as! Int
+            let minute: Int = current.valueForKey("minute") as! Int
+            let formatter = NSNumberFormatter()
+            formatter.minimumIntegerDigits = 2
             
-            let tmp = Room(roomName: name, freeUntil:"\(hour):\(minute)")
+            let tmp = Room(roomName: name, freeUntil:"\(formatter.stringFromNumber(hour)!):\(formatter.stringFromNumber(minute)!)")
             
             rooms.append(tmp)
         }

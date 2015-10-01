@@ -11,43 +11,33 @@ import Foundation
 class JobJSONParser{
     
     
-    private var jobs: [Job] = [Job]()
     
     func parse(data: NSData) ->[Job]{
-        jobs.removeAll()
+        var jobs: [Job] = [Job]()
+
         
-        var error: NSError?
+        let jsonResult:NSArray = (try! NSJSONSerialization.JSONObjectWithData(data, options:NSJSONReadingOptions.MutableContainers ) as? NSArray)!
         
-        let jsonResult:NSArray = (NSJSONSerialization.JSONObjectWithData(data, options:NSJSONReadingOptions.MutableContainers , error: &error) as? NSArray)!
-        if((error) != nil) {
-            // If there is an error parsing JSON, print it to the console
-            println("JSON Error \(error!.localizedDescription)")
-        }
         
         for currentJob in jsonResult{
             
-            var title: String = currentJob.valueForKey("title") as! String
+            let title: String = currentJob.valueForKey("title") as! String
             
             
-            var company: String = currentJob.valueForKey("provider") as! String
-            var description: String = currentJob.valueForKey("description") as! String
-            var contactData: NSDictionary = currentJob.valueForKey("contact") as! NSDictionary
+            let company: String = currentJob.valueForKey("provider") as! String
+            let description: String = currentJob.valueForKey("description") as! String
+            let contactData: NSDictionary = currentJob.valueForKey("contact") as! NSDictionary
             
             
             
-            var contact: Person
+            var contact: Person = Person(id: "", name: "")
             
             if contactData.count > 0 {
-                var id: String = contactData.valueForKey("id") as! String
-                var lastName: String = contactData.valueForKey("lastName") as! String
-                var firstName: String = contactData.valueForKey("firstName") as! String
-                var title: String = contactData.valueForKey("title") as! String
+                let id: String = contactData.valueForKey("id") as! String
+                let name: String = contactData.valueForKey("name") as! String
                 
-                contact = Person(id: id,lastName: lastName, firstName: firstName, title: title)
-            } else {
-                contact = Person(id: "",lastName:"",firstName:"", title:"")
+                contact = Person(id: id, name: name)
             }
-           
             let tmp = Job(title: title, provider: company, description: description, contact: contact)
             jobs.append(tmp)
         }

@@ -14,7 +14,7 @@ class DetailJobViewController: UIViewController {
     var jobTitle: String = ""
     var company: String  = ""
     var jobDescription: String = ""
-    var contact: Person = Person(id: "", lastName: "", firstName: "", title: "")
+    var contact: Person = Person(id: "", name: "")
 
     @IBOutlet weak var detailJobTextView: UITextView!
     
@@ -25,9 +25,18 @@ class DetailJobViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        detailJobTextView.scrollEnabled = false
+        let markupParser = MarkupParser()
+        let text: String = "\(jobTitle)\n\n\(company)\n\n\(jobDescription)\n\n\(contact.name)"
+        let attributedText = markupParser.parseString(text)
         
-        var text: String = "\(jobTitle)\n\n\(company)\n\n\(jobDescription)\n\n\(contact.title)\n\(contact.lastName)\n\(contact.firstName)"
-        detailJobTextView.text = text
+        
+        detailJobTextView.attributedText = attributedText
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        detailJobTextView.scrollEnabled = true
     }
 
     override func didReceiveMemoryWarning() {

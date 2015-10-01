@@ -7,16 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B30BBA691B9B2308003D2EBB /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30BBA681B9B2308003D2EBB /* NewsTableViewController.swift */; };
+		B30BBA6B1B9B23D9003D2EBB /* NewsEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30BBA6A1B9B23D9003D2EBB /* NewsEntry.swift */; };
+		B31309351B9DA7A80074B9EA /* MealsJSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31309341B9DA7A80074B9EA /* MealsJSONParser.swift */; };
 		B31781E41B43E45C00214F6C /* JobTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31781E31B43E45C00214F6C /* JobTableViewController.swift */; };
 		B31781E61B43E4E500214F6C /* JobTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31781E51B43E4E500214F6C /* JobTableViewCell.swift */; };
 		B31781EA1B43E50400214F6C /* JobJSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31781E91B43E50400214F6C /* JobJSONParser.swift */; };
-		B32C16A61B4A9DF500E10EEA /* MarkdownParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32C16A51B4A9DF500E10EEA /* MarkdownParser.swift */; };
-		B367417C1B8351FD00046A46 /* ExampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B367417B1B8351FD00046A46 /* ExampleData.swift */; };
+		B351B5D71B8CB9AA00CECF31 /* TimetableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B351B5D61B8CB9AA00CECF31 /* TimetableViewController.swift */; };
+		B351B5D91B8CBF3C00CECF31 /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = B351B5D81B8CBF3C00CECF31 /* Lesson.swift */; };
+		B351B5DB1B8CC0A600CECF31 /* TimetableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B351B5DA1B8CC0A600CECF31 /* TimetableTableViewCell.swift */; };
+		B351E2E01BBC098E007D5C2E /* MarkupParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B351E2DF1BBC098E007D5C2E /* MarkupParser.swift */; settings = {ASSET_TAGS = (); }; };
+		B351E2E21BBC2349007D5C2E /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B351E2E11BBC2349007D5C2E /* AboutViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		B361832F1BBAAB2400137272 /* LostAndFoundTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B361832E1BBAAB2400137272 /* LostAndFoundTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		B36183311BBAAB4600137272 /* LostAndFoundEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36183301BBAAB4600137272 /* LostAndFoundEntry.swift */; settings = {ASSET_TAGS = (); }; };
+		B36183331BBAAB5B00137272 /* LostAndFoundJSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36183321BBAAB5B00137272 /* LostAndFoundJSONParser.swift */; settings = {ASSET_TAGS = (); }; };
+		B36183351BBAAB6F00137272 /* LostAndFoundTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36183341BBAAB6F00137272 /* LostAndFoundTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
+		B36183371BBAB70E00137272 /* TimeTableGroupJSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36183361BBAB70E00137272 /* TimeTableGroupJSONParser.swift */; settings = {ASSET_TAGS = (); }; };
+		B36183391BBAB89500137272 /* GroupLesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36183381BBAB89500137272 /* GroupLesson.swift */; settings = {ASSET_TAGS = (); }; };
+		B361833B1BBABFB900137272 /* AddLessonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B361833A1BBABFB900137272 /* AddLessonTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
+		B361833D1BBACB9800137272 /* LessonJSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B361833C1BBACB9800137272 /* LessonJSONParser.swift */; settings = {ASSET_TAGS = (); }; };
 		B367417E1B8357C200046A46 /* RoomSearchJSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B367417D1B8357C200046A46 /* RoomSearchJSONParser.swift */; };
-		B36741811B85E47F00046A46 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36741801B85E47F00046A46 /* Person.swift */; };
+		B36741811B85E47F00046A46 /* Teacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36741801B85E47F00046A46 /* Teacher.swift */; };
 		B36741831B85F09300046A46 /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36741821B85F09300046A46 /* Job.swift */; };
+		B36EE3F61B9B46B30069E5CB /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36EE3F51B9B46B30069E5CB /* NewsTableViewCell.swift */; };
+		B3742BC31B8DFA36000923AC /* FSAppData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B3742BC11B8DFA36000923AC /* FSAppData.xcdatamodeld */; };
 		B37EA8941B861E2900D5F700 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37EA8931B861E2900D5F700 /* Group.swift */; };
 		B37EA8961B8624B100D5F700 /* DetailBlackboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37EA8951B8624B100D5F700 /* DetailBlackboardViewController.swift */; };
+		B3879B191B9061120066E2F5 /* DatabaseConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3879B181B9061120066E2F5 /* DatabaseConnector.swift */; };
+		B3879B1B1B9074190066E2F5 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3879B1A1B9074190066E2F5 /* Person.swift */; };
+		B3879B1D1B9076970066E2F5 /* AddLessonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3879B1C1B9076970066E2F5 /* AddLessonViewController.swift */; };
+		B38B429E1B9C620600BE6261 /* NewsJSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38B429D1B9C620600BE6261 /* NewsJSONParser.swift */; };
+		B38B42A01B9C6B3D00BE6261 /* NewsDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38B429F1B9C6B3D00BE6261 /* NewsDescriptionViewController.swift */; };
+		B38B42A21B9C722A00BE6261 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38B42A11B9C722A00BE6261 /* Extensions.swift */; };
+		B38B42A51B9C80FD00BE6261 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38B42A41B9C80FD00BE6261 /* Meal.swift */; };
+		B38B42A71B9C81E800BE6261 /* MealTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38B42A61B9C81E800BE6261 /* MealTableViewController.swift */; };
+		B38B42A91B9C81F700BE6261 /* MealTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38B42A81B9C81F700BE6261 /* MealTableViewCell.swift */; };
 		B39550061B40541F00DD2F99 /* PubilicTransportationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39550051B40541F00DD2F99 /* PubilicTransportationViewController.swift */; };
 		B39550081B42B4D600DD2F99 /* PublicTransportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39550071B42B4D600DD2F99 /* PublicTransportTableViewCell.swift */; };
 		B395500A1B42B65D00DD2F99 /* PublicTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39550091B42B65D00DD2F99 /* PublicTransport.swift */; };
@@ -26,6 +51,7 @@
 		B39C437C1B1627D600DB3A93 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39C437B1B1627D600DB3A93 /* Room.swift */; };
 		B39C437E1B162A5000DB3A93 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39C437D1B162A5000DB3A93 /* TestViewController.swift */; };
 		B39C43801B16503A00DB3A93 /* RoomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39C437F1B16503A00DB3A93 /* RoomTableViewCell.swift */; };
+		B3A75DA41BB8350C009FF7F7 /* HelpAndFeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A75DA31BB8350C009FF7F7 /* HelpAndFeedbackViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		B3C5F6941B30509A00B0F2BF /* RoomsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C5F6931B30509900B0F2BF /* RoomsViewController.swift */; };
 		B3D75CAF1B12404A00C297A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D75CAE1B12404A00C297A0 /* AppDelegate.swift */; };
 		B3D75CB41B12404A00C297A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3D75CB21B12404A00C297A0 /* Main.storyboard */; };
@@ -36,6 +62,7 @@
 		B3ED35441B67EF6B009FA281 /* BlackboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3ED35431B67EF6B009FA281 /* BlackboardTableViewCell.swift */; };
 		B3ED35461B67EF91009FA281 /* BlackboardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3ED35451B67EF91009FA281 /* BlackboardTableViewController.swift */; };
 		B3ED35481B67EFBD009FA281 /* BlackboardJSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3ED35471B67EFBD009FA281 /* BlackboardJSONParser.swift */; };
+		B3FA63BD1BBB3DC200F7B9CC /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FA63BC1BBB3DC200F7B9CC /* MainTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,16 +76,41 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B30BBA681B9B2308003D2EBB /* NewsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
+		B30BBA6A1B9B23D9003D2EBB /* NewsEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsEntry.swift; sourceTree = "<group>"; };
+		B31309341B9DA7A80074B9EA /* MealsJSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealsJSONParser.swift; sourceTree = "<group>"; };
 		B31781E31B43E45C00214F6C /* JobTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobTableViewController.swift; sourceTree = "<group>"; };
 		B31781E51B43E4E500214F6C /* JobTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobTableViewCell.swift; sourceTree = "<group>"; };
 		B31781E91B43E50400214F6C /* JobJSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobJSONParser.swift; sourceTree = "<group>"; };
-		B32C16A51B4A9DF500E10EEA /* MarkdownParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkdownParser.swift; sourceTree = "<group>"; };
-		B367417B1B8351FD00046A46 /* ExampleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleData.swift; sourceTree = "<group>"; };
+		B351B5D61B8CB9AA00CECF31 /* TimetableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimetableViewController.swift; sourceTree = "<group>"; };
+		B351B5D81B8CBF3C00CECF31 /* Lesson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
+		B351B5DA1B8CC0A600CECF31 /* TimetableTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimetableTableViewCell.swift; sourceTree = "<group>"; };
+		B351E2DF1BBC098E007D5C2E /* MarkupParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkupParser.swift; sourceTree = "<group>"; };
+		B351E2E11BBC2349007D5C2E /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		B361832E1BBAAB2400137272 /* LostAndFoundTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LostAndFoundTableViewController.swift; sourceTree = "<group>"; };
+		B36183301BBAAB4600137272 /* LostAndFoundEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LostAndFoundEntry.swift; sourceTree = "<group>"; };
+		B36183321BBAAB5B00137272 /* LostAndFoundJSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LostAndFoundJSONParser.swift; sourceTree = "<group>"; };
+		B36183341BBAAB6F00137272 /* LostAndFoundTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LostAndFoundTableViewCell.swift; sourceTree = "<group>"; };
+		B36183361BBAB70E00137272 /* TimeTableGroupJSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeTableGroupJSONParser.swift; sourceTree = "<group>"; };
+		B36183381BBAB89500137272 /* GroupLesson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupLesson.swift; sourceTree = "<group>"; };
+		B361833A1BBABFB900137272 /* AddLessonTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddLessonTableViewCell.swift; sourceTree = "<group>"; };
+		B361833C1BBACB9800137272 /* LessonJSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LessonJSONParser.swift; sourceTree = "<group>"; };
 		B367417D1B8357C200046A46 /* RoomSearchJSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomSearchJSONParser.swift; sourceTree = "<group>"; };
-		B36741801B85E47F00046A46 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		B36741801B85E47F00046A46 /* Teacher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Teacher.swift; sourceTree = "<group>"; };
 		B36741821B85F09300046A46 /* Job.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
+		B36EE3F51B9B46B30069E5CB /* NewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
+		B3742BC21B8DFA36000923AC /* FSAppData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FSAppData.xcdatamodel; sourceTree = "<group>"; };
 		B37EA8931B861E2900D5F700 /* Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		B37EA8951B8624B100D5F700 /* DetailBlackboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailBlackboardViewController.swift; sourceTree = "<group>"; };
+		B3879B181B9061120066E2F5 /* DatabaseConnector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DatabaseConnector.swift; path = "FS-App/DatabaseConnector.swift"; sourceTree = SOURCE_ROOT; };
+		B3879B1A1B9074190066E2F5 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		B3879B1C1B9076970066E2F5 /* AddLessonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddLessonViewController.swift; sourceTree = "<group>"; };
+		B38B429D1B9C620600BE6261 /* NewsJSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsJSONParser.swift; sourceTree = "<group>"; };
+		B38B429F1B9C6B3D00BE6261 /* NewsDescriptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsDescriptionViewController.swift; sourceTree = "<group>"; };
+		B38B42A11B9C722A00BE6261 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		B38B42A41B9C80FD00BE6261 /* Meal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
+		B38B42A61B9C81E800BE6261 /* MealTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealTableViewController.swift; sourceTree = "<group>"; };
+		B38B42A81B9C81F700BE6261 /* MealTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealTableViewCell.swift; sourceTree = "<group>"; };
 		B39550051B40541F00DD2F99 /* PubilicTransportationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PubilicTransportationViewController.swift; sourceTree = "<group>"; };
 		B39550071B42B4D600DD2F99 /* PublicTransportTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicTransportTableViewCell.swift; sourceTree = "<group>"; };
 		B39550091B42B65D00DD2F99 /* PublicTransport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicTransport.swift; sourceTree = "<group>"; };
@@ -68,6 +120,7 @@
 		B39C437B1B1627D600DB3A93 /* Room.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Room.swift; path = "FS-App/Room.swift"; sourceTree = "<group>"; };
 		B39C437D1B162A5000DB3A93 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		B39C437F1B16503A00DB3A93 /* RoomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomTableViewCell.swift; sourceTree = "<group>"; };
+		B3A75DA31BB8350C009FF7F7 /* HelpAndFeedbackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpAndFeedbackViewController.swift; sourceTree = "<group>"; };
 		B3C5F6931B30509900B0F2BF /* RoomsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomsViewController.swift; sourceTree = "<group>"; };
 		B3D75CA91B12404A00C297A0 /* FS-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FS-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3D75CAD1B12404A00C297A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -82,6 +135,7 @@
 		B3ED35431B67EF6B009FA281 /* BlackboardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlackboardTableViewCell.swift; sourceTree = "<group>"; };
 		B3ED35451B67EF91009FA281 /* BlackboardTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlackboardTableViewController.swift; sourceTree = "<group>"; };
 		B3ED35471B67EFBD009FA281 /* BlackboardJSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlackboardJSONParser.swift; sourceTree = "<group>"; };
+		B3FA63BC1BBB3DC200F7B9CC /* MainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +156,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B30BBA671B9B22ED003D2EBB /* News */ = {
+			isa = PBXGroup;
+			children = (
+				B30BBA681B9B2308003D2EBB /* NewsTableViewController.swift */,
+				B30BBA6A1B9B23D9003D2EBB /* NewsEntry.swift */,
+				B36EE3F51B9B46B30069E5CB /* NewsTableViewCell.swift */,
+				B38B429D1B9C620600BE6261 /* NewsJSONParser.swift */,
+				B38B429F1B9C6B3D00BE6261 /* NewsDescriptionViewController.swift */,
+			);
+			name = News;
+			sourceTree = "<group>";
+		};
 		B31781E21B43DB3300214F6C /* Job */ = {
 			isa = PBXGroup;
 			children = (
@@ -110,10 +176,46 @@
 				B31781E91B43E50400214F6C /* JobJSONParser.swift */,
 				B36741821B85F09300046A46 /* Job.swift */,
 				B3E4700D1B4989820083A917 /* DetailJobViewController.swift */,
-				B32C16A51B4A9DF500E10EEA /* MarkdownParser.swift */,
-				B36741801B85E47F00046A46 /* Person.swift */,
 			);
 			name = Job;
+			sourceTree = "<group>";
+		};
+		B351B5D51B8CB97B00CECF31 /* Timetable */ = {
+			isa = PBXGroup;
+			children = (
+				B351B5D61B8CB9AA00CECF31 /* TimetableViewController.swift */,
+				B351B5D81B8CBF3C00CECF31 /* Lesson.swift */,
+				B351B5DA1B8CC0A600CECF31 /* TimetableTableViewCell.swift */,
+				B36741801B85E47F00046A46 /* Teacher.swift */,
+				B3879B1C1B9076970066E2F5 /* AddLessonViewController.swift */,
+				B36183361BBAB70E00137272 /* TimeTableGroupJSONParser.swift */,
+				B36183381BBAB89500137272 /* GroupLesson.swift */,
+				B361833A1BBABFB900137272 /* AddLessonTableViewCell.swift */,
+				B361833C1BBACB9800137272 /* LessonJSONParser.swift */,
+			);
+			name = Timetable;
+			sourceTree = "<group>";
+		};
+		B361832D1BBAAB0200137272 /* Lost&Found */ = {
+			isa = PBXGroup;
+			children = (
+				B361832E1BBAAB2400137272 /* LostAndFoundTableViewController.swift */,
+				B36183301BBAAB4600137272 /* LostAndFoundEntry.swift */,
+				B36183321BBAAB5B00137272 /* LostAndFoundJSONParser.swift */,
+				B36183341BBAAB6F00137272 /* LostAndFoundTableViewCell.swift */,
+			);
+			name = "Lost&Found";
+			sourceTree = "<group>";
+		};
+		B38B42A31B9C80EB00BE6261 /* Meal */ = {
+			isa = PBXGroup;
+			children = (
+				B38B42A41B9C80FD00BE6261 /* Meal.swift */,
+				B38B42A61B9C81E800BE6261 /* MealTableViewController.swift */,
+				B38B42A81B9C81F700BE6261 /* MealTableViewCell.swift */,
+				B31309341B9DA7A80074B9EA /* MealsJSONParser.swift */,
+			);
+			name = Meal;
 			sourceTree = "<group>";
 		};
 		B39550041B4051E500DD2F99 /* PublicTransportation */ = {
@@ -125,6 +227,14 @@
 				B395500D1B42D2F400DD2F99 /* PublicTransportJSONParser.swift */,
 			);
 			name = PublicTransportation;
+			sourceTree = "<group>";
+		};
+		B3A75DA21BB834EB009FF7F7 /* HelpAndFeedback */ = {
+			isa = PBXGroup;
+			children = (
+				B3A75DA31BB8350C009FF7F7 /* HelpAndFeedbackViewController.swift */,
+			);
+			name = HelpAndFeedback;
 			sourceTree = "<group>";
 		};
 		B3D75CA01B12404A00C297A0 = {
@@ -148,6 +258,11 @@
 		B3D75CAB1B12404A00C297A0 /* FS-App */ = {
 			isa = PBXGroup;
 			children = (
+				B361832D1BBAAB0200137272 /* Lost&Found */,
+				B3A75DA21BB834EB009FF7F7 /* HelpAndFeedback */,
+				B38B42A31B9C80EB00BE6261 /* Meal */,
+				B30BBA671B9B22ED003D2EBB /* News */,
+				B351B5D51B8CB97B00CECF31 /* Timetable */,
 				B3ED35401B67EE0B009FA281 /* Blackboard */,
 				B3F982351B170A7E003DDCDB /* Test */,
 				B31781E21B43DB3300214F6C /* Job */,
@@ -155,7 +270,6 @@
 				B3F982341B170A6B003DDCDB /* Common */,
 				B3F982331B1707DA003DDCDB /* RoomSearch */,
 				B3D75CAC1B12404A00C297A0 /* Supporting Files */,
-				B367417B1B8351FD00046A46 /* ExampleData.swift */,
 			);
 			path = "FS-App";
 			sourceTree = "<group>";
@@ -213,11 +327,18 @@
 		B3F982341B170A6B003DDCDB /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				B3879B181B9061120066E2F5 /* DatabaseConnector.swift */,
 				B39793131B53E66A006E4758 /* Images.xcassets */,
 				B3D75CB21B12404A00C297A0 /* Main.storyboard */,
 				B3D75CB71B12404A00C297A0 /* LaunchScreen.xib */,
 				B395500B1B42C2B200DD2F99 /* URLs.swift */,
+				B3742BC11B8DFA36000923AC /* FSAppData.xcdatamodeld */,
 				B37EA8931B861E2900D5F700 /* Group.swift */,
+				B3879B1A1B9074190066E2F5 /* Person.swift */,
+				B38B42A11B9C722A00BE6261 /* Extensions.swift */,
+				B3FA63BC1BBB3DC200F7B9CC /* MainTableViewController.swift */,
+				B351E2DF1BBC098E007D5C2E /* MarkupParser.swift */,
+				B351E2E11BBC2349007D5C2E /* AboutViewController.swift */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -275,11 +396,14 @@
 		B3D75CA11B12404A00C297A0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0630;
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = Fachschaft07;
 				TargetAttributes = {
 					B3D75CA81B12404A00C297A0 = {
 						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = KAS2X362J6;
 					};
 					B3D75CBD1B12404A00C297A0 = {
 						CreatedOnToolsVersion = 6.3.2;
@@ -348,30 +472,57 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3ED35441B67EF6B009FA281 /* BlackboardTableViewCell.swift in Sources */,
+				B36183371BBAB70E00137272 /* TimeTableGroupJSONParser.swift in Sources */,
+				B36183311BBAAB4600137272 /* LostAndFoundEntry.swift in Sources */,
 				B3ED35481B67EFBD009FA281 /* BlackboardJSONParser.swift in Sources */,
 				B3ED35421B67EE30009FA281 /* Entry.swift in Sources */,
 				B37EA8941B861E2900D5F700 /* Group.swift in Sources */,
 				B39C43801B16503A00DB3A93 /* RoomTableViewCell.swift in Sources */,
 				B39C437E1B162A5000DB3A93 /* TestViewController.swift in Sources */,
 				B39550061B40541F00DD2F99 /* PubilicTransportationViewController.swift in Sources */,
+				B38B42A21B9C722A00BE6261 /* Extensions.swift in Sources */,
 				B3C5F6941B30509A00B0F2BF /* RoomsViewController.swift in Sources */,
 				B395500A1B42B65D00DD2F99 /* PublicTransport.swift in Sources */,
+				B361833D1BBACB9800137272 /* LessonJSONParser.swift in Sources */,
 				B367417E1B8357C200046A46 /* RoomSearchJSONParser.swift in Sources */,
-				B32C16A61B4A9DF500E10EEA /* MarkdownParser.swift in Sources */,
+				B3879B1B1B9074190066E2F5 /* Person.swift in Sources */,
+				B361833B1BBABFB900137272 /* AddLessonTableViewCell.swift in Sources */,
+				B36183351BBAAB6F00137272 /* LostAndFoundTableViewCell.swift in Sources */,
 				B3E4700E1B4989820083A917 /* DetailJobViewController.swift in Sources */,
+				B3FA63BD1BBB3DC200F7B9CC /* MainTableViewController.swift in Sources */,
 				B31781E41B43E45C00214F6C /* JobTableViewController.swift in Sources */,
-				B36741811B85E47F00046A46 /* Person.swift in Sources */,
+				B36183331BBAAB5B00137272 /* LostAndFoundJSONParser.swift in Sources */,
+				B36741811B85E47F00046A46 /* Teacher.swift in Sources */,
 				B395500C1B42C2B200DD2F99 /* URLs.swift in Sources */,
 				B31781E61B43E4E500214F6C /* JobTableViewCell.swift in Sources */,
+				B3A75DA41BB8350C009FF7F7 /* HelpAndFeedbackViewController.swift in Sources */,
+				B38B42A01B9C6B3D00BE6261 /* NewsDescriptionViewController.swift in Sources */,
+				B3879B191B9061120066E2F5 /* DatabaseConnector.swift in Sources */,
 				B3ED35461B67EF91009FA281 /* BlackboardTableViewController.swift in Sources */,
+				B351B5DB1B8CC0A600CECF31 /* TimetableTableViewCell.swift in Sources */,
+				B3879B1D1B9076970066E2F5 /* AddLessonViewController.swift in Sources */,
+				B361832F1BBAAB2400137272 /* LostAndFoundTableViewController.swift in Sources */,
+				B36183391BBAB89500137272 /* GroupLesson.swift in Sources */,
+				B38B42A91B9C81F700BE6261 /* MealTableViewCell.swift in Sources */,
 				B395500E1B42D2F400DD2F99 /* PublicTransportJSONParser.swift in Sources */,
+				B36EE3F61B9B46B30069E5CB /* NewsTableViewCell.swift in Sources */,
+				B351B5D91B8CBF3C00CECF31 /* Lesson.swift in Sources */,
 				B39550081B42B4D600DD2F99 /* PublicTransportTableViewCell.swift in Sources */,
 				B31781EA1B43E50400214F6C /* JobJSONParser.swift in Sources */,
+				B38B42A51B9C80FD00BE6261 /* Meal.swift in Sources */,
+				B30BBA6B1B9B23D9003D2EBB /* NewsEntry.swift in Sources */,
+				B38B42A71B9C81E800BE6261 /* MealTableViewController.swift in Sources */,
+				B351B5D71B8CB9AA00CECF31 /* TimetableViewController.swift in Sources */,
+				B30BBA691B9B2308003D2EBB /* NewsTableViewController.swift in Sources */,
 				B36741831B85F09300046A46 /* Job.swift in Sources */,
 				B39C437C1B1627D600DB3A93 /* Room.swift in Sources */,
+				B351E2E01BBC098E007D5C2E /* MarkupParser.swift in Sources */,
+				B38B429E1B9C620600BE6261 /* NewsJSONParser.swift in Sources */,
 				B37EA8961B8624B100D5F700 /* DetailBlackboardViewController.swift in Sources */,
 				B3D75CAF1B12404A00C297A0 /* AppDelegate.swift in Sources */,
-				B367417C1B8351FD00046A46 /* ExampleData.swift in Sources */,
+				B3742BC31B8DFA36000923AC /* FSAppData.xcdatamodeld in Sources */,
+				B351E2E21BBC2349007D5C2E /* AboutViewController.swift in Sources */,
+				B31309351B9DA7A80074B9EA /* MealsJSONParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,7 +567,6 @@
 		B3D75CC61B12404A00C297A0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -434,6 +584,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -461,7 +612,6 @@
 		B3D75CC71B12404A00C297A0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -501,9 +651,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "FS-App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "FS-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -513,9 +667,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "FS-App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "FS-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -524,16 +682,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "FS-AppTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.hm.cs.fs.reischi.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FS-App.app/FS-App";
 			};
@@ -543,12 +698,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
 				INFOPLIST_FILE = "FS-AppTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.hm.cs.fs.reischi.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FS-App.app/FS-App";
 			};
@@ -585,6 +737,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B3742BC11B8DFA36000923AC /* FSAppData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B3742BC21B8DFA36000923AC /* FSAppData.xcdatamodel */,
+			);
+			currentVersion = B3742BC21B8DFA36000923AC /* FSAppData.xcdatamodel */;
+			path = FSAppData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = B3D75CA11B12404A00C297A0 /* Project object */;
 }

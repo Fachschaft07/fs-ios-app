@@ -31,7 +31,7 @@ class BlackboardTableViewCell: UITableViewCell {
                 groups = ""
                 for group in entry.groups {
                     var currentGroup: String = group.study
-                    var semester = ""
+                    
                     if group.semester != 0{
                         currentGroup = "\(currentGroup) \(group.semester)"
                     }
@@ -49,10 +49,4 @@ class BlackboardTableViewCell: UITableViewCell {
         }
     }
     
-}
-extension String {
-    /** func to check if a string contains the given string */
-    func contains(find: String) -> Bool{
-        return self.rangeOfString(find) != nil
-    }
 }
