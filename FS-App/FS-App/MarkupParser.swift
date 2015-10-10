@@ -9,12 +9,10 @@
 import UIKit
 
 struct Fonts {
-    static let header: UIFont = UIFont(name: "HelveticaNeue-Bold", size: 28.0)!
-    static let headerItalic: UIFont = UIFont(name: "Helvetica-BoldOblique", size: 28.0)!
-    static let normalText: UIFont = UIFont(name: "HelveticaNeue", size: 12.0)!
-    static let boldText: UIFont = UIFont(name: "HelveticaNeue-Bold", size: 12.0)!
-    static let italicText: UIFont = UIFont(name: "HelveticaNeue-Italic", size: 12.0)!
-    static let boldItalicText: UIFont = UIFont(name: "Helvetica-BoldOblique", size: 12.0)!
+
+    static let normalText: UIFont = UIFont(name: "HelveticaNeue", size: 17.0)!
+    static let boldText: UIFont = UIFont(name: "HelveticaNeue-Bold", size: 17.0)!
+    static let italicText: UIFont = UIFont(name: "HelveticaNeue-Italic", size: 17.0)!
 }
 
 class MarkupParser {
@@ -46,8 +44,3 @@ class MarkupParser {
         return completeString
     }
 }
-
-//hashtag neue zeile,
-//*text* fett
-//.Text = liste
-// . = listenEnde

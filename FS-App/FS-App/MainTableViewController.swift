@@ -17,7 +17,8 @@ class MainTableViewController: UITableViewController {
         if let version = NSBundle.mainBundle().infoDictionary?["CFBundleShortVersionString"] as? String {
             versionLabel.text = "Version \(version)"
         }
-        
+        tableView.estimatedRowHeight = tableView.rowHeight
+        tableView.rowHeight = UITableViewAutomaticDimension
     }
 
     override func didReceiveMemoryWarning() {
@@ -42,6 +43,7 @@ class MainTableViewController: UITableViewController {
     @IBOutlet weak var roomLabel: UILabel!
     @IBOutlet weak var teacherLabel: UILabel!
     @IBOutlet weak var suffixLabel: UILabel!
+    @IBOutlet weak var dayLabel: UILabel!
     
     private func loadLesson(){
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
@@ -49,7 +51,7 @@ class MainTableViewController: UITableViewController {
         let database: DatabaseConnector = DatabaseConnector(context: context!)
         let time = getTime()
 //        print(time.hour)
-        let lesson = database.getLesson(time.day, hour: time.hour)
+        let lesson = database.getNextLesson(time.day, hour: time.hour)
         let formatter = NSNumberFormatter()
         formatter.minimumIntegerDigits = 2
         timeLabel.text = "\(formatter.stringFromNumber(Int(lesson.hour!)!)!):\(formatter.stringFromNumber(Int(lesson.minute!)!)!)"
@@ -59,6 +61,7 @@ class MainTableViewController: UITableViewController {
         teacherLabel.text = database.getTeacher(lesson.teacherID!)?.name ?? ""
         
         suffixLabel.text = lesson.suffix!
+        dayLabel.text = lesson.day!
         
     }
     

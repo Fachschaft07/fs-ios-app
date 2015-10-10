@@ -27,7 +27,7 @@ class AddLessonViewController: UIViewController, UITableViewDataSource, UITableV
     
     @IBOutlet weak var groupTextField: UITextField!
     func checkInput(input: String) -> Bool {
-        let pattern: String = "((ib|c|f|g|n|s)|go)[1-7]?(a|b|c)?"
+        let pattern: String = "^((i(b|c|f|g|n|s))|go)[1-7]?(a|b|c)?$"
         if input.rangeOfString(pattern, options: .RegularExpressionSearch) != nil {
             return true
         }
@@ -47,9 +47,29 @@ class AddLessonViewController: UIViewController, UITableViewDataSource, UITableV
                         dispatch_async(dispatch_get_main_queue()){
                             let parser = TimeTableGroupJSONParser()
                             self.groupLessons = parser.parse(jsonData)
+                            if self.groupLessons.count == 0 {
+                                let refreshAlert = UIAlertController(title: "Studiengruppe nicht gefunden", message: "Die eingegebene Studiengruppe \(group) wurde nicht gefunden.", preferredStyle: UIAlertControllerStyle.Alert)
+                                
+                                refreshAlert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { (action: UIAlertAction!) in
+                                    self.groupTextField.text = ""
+                                }))
+                                
+                                self.presentViewController(refreshAlert, animated: true, completion: nil)
+
+                            }
                             self.addLessonTableView.reloadData()
                             //display groups on TableView
                             //print(self.groupLessons)
+                        }
+                    } else {
+                        dispatch_async(dispatch_get_main_queue()){
+                            
+                            let refreshAlert = UIAlertController(title: "Keine Verbindung", message: "Leider konnte keine Verbindung zur Schnittstelle hergestellt werden. Versuchen Sie es bitte später erneut.", preferredStyle: UIAlertControllerStyle.Alert)
+                            
+                            refreshAlert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { (action: UIAlertAction!) in
+                            }))
+                            
+                            self.presentViewController(refreshAlert, animated: true, completion: nil)
                         }
                     }
                 }

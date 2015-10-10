@@ -41,6 +41,16 @@ class LostAndFoundTableViewController: UITableViewController {
                         self.lostAndFoundTableView.reloadData()
                         sender?.endRefreshing()
                     }
+                } else {
+                    dispatch_async(dispatch_get_main_queue()){
+                        let refreshAlert = UIAlertController(title: "Keine Verbindung", message: "Leider konnte keine Verbindung zur Schnittstelle hergestellt werden. Versuchen Sie es bitte später erneut.", preferredStyle: UIAlertControllerStyle.Alert)
+                        
+                        refreshAlert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { (action: UIAlertAction!) in
+                        }))
+                        
+                        self.presentViewController(refreshAlert, animated: true, completion: nil)
+                    }
+                    sender?.endRefreshing()
                 }
             }
         }

@@ -31,6 +31,13 @@ class MealTableViewController: UITableViewController {
                         self.meals = parser.parse(jsonData)
                         self.mealTableView.reloadData()
                     }
+                } else {
+                    let refreshAlert = UIAlertController(title: "Keine Verbindung", message: "Leider konnte keine Verbindung zur Schnittstelle hergestellt werden. Versuchen Sie es bitte später erneut.", preferredStyle: UIAlertControllerStyle.Alert)
+                    
+                    refreshAlert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { (action: UIAlertAction!) in
+                    }))
+                    
+                    self.presentViewController(refreshAlert, animated: true, completion: nil)
                 }
             }
         }

@@ -108,7 +108,8 @@ class TimetableViewController: UIViewController, UITableViewDataSource, UITableV
         let refreshAlert = UIAlertController(title: "Stundenplan zurücksetzen", message: "Achtung alle eingetragenen Stunden werden aus dem Stundenplan gelöscht.", preferredStyle: UIAlertControllerStyle.Alert)
         
         refreshAlert.addAction(UIAlertAction(title: "Delete", style: .Destructive, handler: { (action: UIAlertAction!) in
-           databaseConnector?.clearLessons()
+            self.databaseConnector?.clearLessons()
+            self.tableView.reloadData()
         }))
         
         refreshAlert.addAction(UIAlertAction(title: "Cancel", style: .Default, handler: { (action: UIAlertAction!) in

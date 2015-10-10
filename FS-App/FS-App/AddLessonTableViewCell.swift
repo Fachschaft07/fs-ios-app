@@ -19,26 +19,28 @@ class AddLessonTableViewCell: UITableViewCell {
     
     @IBOutlet weak var moduleNameLabel: UILabel!
     @IBOutlet weak var teacherLabel: UILabel!
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
+    var hasGroups = false
 
-
+    @IBOutlet weak var addSwitch: UISwitch!
     
     func updateUI() {
         moduleNameLabel.text = nil
         teacherLabel.text = nil
-        
+        addSwitch.on = false
         if let lesson = self.lesson {
             moduleNameLabel.text = lesson.moduleName
             teacherLabel.text = lesson.teacherName
             if lesson.groups.count > 1 {
-                
-                let items = ["1", "2", "3"]
-                let segmentedControl = UISegmentedControl(items: items)
-                let size = teacherLabel.frame.size
-                let position = teacherLabel.frame.origin
-                segmentedControl.frame = CGRect(x: position.x, y: position.y + size.height + 8, width: size.width, height: size.height)
-                
+                hasGroups = true
+                segmentedControl.removeAllSegments()
+                for group in lesson.groups{
+                    segmentedControl.insertSegmentWithTitle("Gruppe \(group)", atIndex: group-1, animated: false)
+                }
                 segmentedControl.selectedSegmentIndex = 0
-                self.addSubview(segmentedControl)
+            }
+            else {
+                segmentedControl.removeAllSegments()
             }
         }
     }
@@ -52,9 +54,11 @@ class AddLessonTableViewCell: UITableViewCell {
                 let group = "\(lesson.study)\(lesson.semester)\(lesson.letter)"
                 let module = lesson.moduleID
                 let teacher = lesson.teacherID
-                let pk = "1"
+                var pk = "0"
+                if hasGroups {
+                    pk = "\(segmentedControl.selectedSegmentIndex+1)"
+                }
                 let url = "\(URLs.lesson)\(group)&module=\(module)&teacher=\(teacher)&pk=\(pk)"
-                print(url)
                 let nsurl = NSURL(string: url)
                 
                 if let url = nsurl {
@@ -68,7 +72,6 @@ class AddLessonTableViewCell: UITableViewCell {
                                 let context = appDelegate.managedObjectContext
                                 let database: DatabaseConnector = DatabaseConnector(context: context!)
                                 parser.parse(jsonData, database: database)
-                                print("done")
                             }
                         }
                     }

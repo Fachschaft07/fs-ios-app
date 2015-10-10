@@ -49,7 +49,6 @@
 		B395500E1B42D2F400DD2F99 /* PublicTransportJSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B395500D1B42D2F400DD2F99 /* PublicTransportJSONParser.swift */; };
 		B39793141B53E66A006E4758 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B39793131B53E66A006E4758 /* Images.xcassets */; };
 		B39C437C1B1627D600DB3A93 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39C437B1B1627D600DB3A93 /* Room.swift */; };
-		B39C437E1B162A5000DB3A93 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39C437D1B162A5000DB3A93 /* TestViewController.swift */; };
 		B39C43801B16503A00DB3A93 /* RoomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39C437F1B16503A00DB3A93 /* RoomTableViewCell.swift */; };
 		B3A75DA41BB8350C009FF7F7 /* HelpAndFeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A75DA31BB8350C009FF7F7 /* HelpAndFeedbackViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		B3C5F6941B30509A00B0F2BF /* RoomsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C5F6931B30509900B0F2BF /* RoomsViewController.swift */; };
@@ -118,7 +117,6 @@
 		B395500D1B42D2F400DD2F99 /* PublicTransportJSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicTransportJSONParser.swift; sourceTree = "<group>"; };
 		B39793131B53E66A006E4758 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B39C437B1B1627D600DB3A93 /* Room.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Room.swift; path = "FS-App/Room.swift"; sourceTree = "<group>"; };
-		B39C437D1B162A5000DB3A93 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		B39C437F1B16503A00DB3A93 /* RoomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomTableViewCell.swift; sourceTree = "<group>"; };
 		B3A75DA31BB8350C009FF7F7 /* HelpAndFeedbackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpAndFeedbackViewController.swift; sourceTree = "<group>"; };
 		B3C5F6931B30509900B0F2BF /* RoomsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomsViewController.swift; sourceTree = "<group>"; };
@@ -264,7 +262,6 @@
 				B30BBA671B9B22ED003D2EBB /* News */,
 				B351B5D51B8CB97B00CECF31 /* Timetable */,
 				B3ED35401B67EE0B009FA281 /* Blackboard */,
-				B3F982351B170A7E003DDCDB /* Test */,
 				B31781E21B43DB3300214F6C /* Job */,
 				B39550041B4051E500DD2F99 /* PublicTransportation */,
 				B3F982341B170A6B003DDCDB /* Common */,
@@ -341,14 +338,6 @@
 				B351E2E11BBC2349007D5C2E /* AboutViewController.swift */,
 			);
 			name = Common;
-			sourceTree = "<group>";
-		};
-		B3F982351B170A7E003DDCDB /* Test */ = {
-			isa = PBXGroup;
-			children = (
-				B39C437D1B162A5000DB3A93 /* TestViewController.swift */,
-			);
-			name = Test;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -478,7 +467,6 @@
 				B3ED35421B67EE30009FA281 /* Entry.swift in Sources */,
 				B37EA8941B861E2900D5F700 /* Group.swift in Sources */,
 				B39C43801B16503A00DB3A93 /* RoomTableViewCell.swift in Sources */,
-				B39C437E1B162A5000DB3A93 /* TestViewController.swift in Sources */,
 				B39550061B40541F00DD2F99 /* PubilicTransportationViewController.swift in Sources */,
 				B38B42A21B9C722A00BE6261 /* Extensions.swift in Sources */,
 				B3C5F6941B30509A00B0F2BF /* RoomsViewController.swift in Sources */,

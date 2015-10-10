@@ -67,22 +67,21 @@ class DatabaseConnector {
     }
     
     func updateEntity(keys: [String], values: (moduleName: String, room: String, suffix: String, teacherID: String)){
-        print("update value")
-        print(keys)
-        print(values)
+        
         //let predicate = NSPredicate(format: "moduleID == %@", 3)
         let predicate = NSPredicate(format: "day == %@ && hour == %@", argumentArray: keys)
         let fetchRequest = NSFetchRequest(entityName: "Lesson")
         fetchRequest.predicate = predicate
         
         let fetchedEntities = (try! context.executeFetchRequest(fetchRequest)) as! [Lesson]
-        print(fetchedEntities)
         if let lesson = fetchedEntities.first {
-            //print("\(lesson.moduleID), \(lesson.day), \(lesson.hour)")
-            //lesson.moduleName = values.
             lesson.moduleName = values.moduleName
             lesson.room = values.room
-            lesson.suffix = values.suffix
+            var suf = values.suffix
+            if suf.characters.count > 58 {
+                suf = "\(suf.substringWithRange(Range<String.Index>(start: suf.startIndex, end: suf.startIndex.advancedBy(59))))..."
+            }
+            lesson.suffix = suf
             lesson.teacherID = values.teacherID
         }
         do {
@@ -99,9 +98,7 @@ class DatabaseConnector {
         fetchRequest.sortDescriptors = [primarySortDescriptor]
         
         let fetchedEntities = (try! context.executeFetchRequest(fetchRequest)) as! [Lesson]
-//        for lesson in fetchedEntities {
-//            lesson.printLesson()
-//        }
+
         return fetchedEntities
     }
 
@@ -149,6 +146,35 @@ class DatabaseConnector {
         fetchRequest.predicate = predicate
         
         let fetchedEntities = (try! context.executeFetchRequest(fetchRequest)) as! [Lesson]
+        return fetchedEntities[0]
+    }
+    
+    func getNextLesson(day: String, hour: String) -> Lesson {
+        let predicate = NSPredicate(format: "day == %@ && hour == %@", argumentArray: [day, hour])
+        let fetchRequest = NSFetchRequest(entityName: "Lesson")
+        fetchRequest.predicate = predicate
+        let fetchedEntities = (try! context.executeFetchRequest(fetchRequest)) as! [Lesson]
+        
+        
+        return getNextLesson(fetchedEntities[0].moduleID, first: fetchedEntities[0].moduleID)
+    }
+    
+    func getNextLesson(id: Int16, first: Int16) -> Lesson {
+        let predicate = NSPredicate(format: "moduleID == %@", argumentArray: ["\(id)"])
+        let fetchRequest = NSFetchRequest(entityName: "Lesson")
+        fetchRequest.predicate = predicate
+        let fetchedEntities = (try! context.executeFetchRequest(fetchRequest)) as! [Lesson]
+        if fetchedEntities[0].moduleName == nil || fetchedEntities[0].moduleName == "" {
+            var nextID = id+1
+            if id == first {
+                return fetchedEntities[0]
+            }
+            if nextID == 35 {
+                nextID = 0
+            }
+            
+            return getNextLesson(nextID, first: first)
+        }
         return fetchedEntities[0]
     }
     
