@@ -392,7 +392,6 @@
 				TargetAttributes = {
 					B3D75CA81B12404A00C297A0 = {
 						CreatedOnToolsVersion = 6.3.2;
-						DevelopmentTeam = KAS2X362J6;
 					};
 					B3D75CBD1B12404A00C297A0 = {
 						CreatedOnToolsVersion = 6.3.2;
